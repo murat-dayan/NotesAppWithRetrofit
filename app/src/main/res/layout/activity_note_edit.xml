@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".NoteEditActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarNE"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextLessonNameNE"
+            android:layout_width="245dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="90dp"
+            android:ems="10"
+            android:hint="LessonName"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarNE" />
+
+        <EditText
+            android:id="@+id/editTextNote2NE"
+            android:layout_width="245dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="100dp"
+            android:ems="10"
+            android:hint="Note 2"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNote1NE" />
+
+        <EditText
+            android:id="@+id/editTextNote1NE"
+            android:layout_width="245dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="100dp"
+            android:ems="10"
+            android:hint="Note 1"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextLessonNameNE" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
