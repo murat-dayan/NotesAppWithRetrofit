@@ -50,12 +50,22 @@ class MainActivity : AppCompatActivity() {
             override fun onResponse(
                 call: Call<NotesResponse>?, response: Response<NotesResponse>?
             ) {
+
+                var sumNotes=0
                 if (response != null) {
 
                     val responseList = response.body().notlar
                     notesList = ArrayList<Notes>(responseList)
                     rvNAdapter = RVNotesAdapter(this@MainActivity, notesList)
                     binding.rv.adapter = rvNAdapter
+
+                    for (n in notesList){
+                        sumNotes= sumNotes + (n.not1+n.not2)/2
+                    }
+
+                    if (sumNotes != 0){
+                        binding.toolbar.subtitle= "Average : ${sumNotes/notesList.size}"
+                    }
 
                 }
             }
